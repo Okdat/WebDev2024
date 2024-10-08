@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Stats</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="home.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Task Statistics</h1>
+
+        <!-- Summary -->
+        <div class="stats-summary">
+            <div class="stat-item">
+                <h3>Total Tasks</h3>
+                <p id="total-tasks">120</p>
+            </div>
+            <div class="stat-item">
+                <h3>Completed Tasks</h3>
+                <p id="completed-tasks">80</p>
+            </div>
+            <div class="stat-item">
+                <h3>Pending Tasks</h3>
+                <p id="pending-tasks">40</p>
+            </div>
+        </div>
+
+        <!-- Tasks by Priority  -->
+        <div class="tasks-priority">
+            <h2>Tasks by Priority</h2>
+            <canvas id="priorityChart"></canvas>
+        </div>
+
+        <!-- Tasks by Status  -->
+        <div class="tasks-status">
+            <h2>Tasks by Status</h2>
+            <canvas id="statusChart"></canvas>
+        </div>
+
+    </div>
+
+    <!--  generate charts  -->
+    <script>
+        // Tasks by Priority (High, Medium, Low)
+        const priorityData = {
+            labels: ['High', 'Medium', 'Low'],
+            datasets: [{
+                label: 'Tasks by Priority',
+                data: [40, 50, 30], // Example data, replace with dynamic values
+                backgroundColor: ['#ff6384', '#36a2eb', '#ffcd56'],
+            }]
+        };
+
+        // Config for Priority Chart
+        const priorityConfig = {
+            type: 'doughnut',
+            data: priorityData,
+        };
+
+       
+        new Chart(
+            document.getElementById('priorityChart'),
+            priorityConfig
+        );
+
+        // Data for Tasks by Status 
+        const statusData = {
+            labels: ['Pending', 'In-Progress', 'Completed', 'Deployed', 'Deferred'],
+            datasets: [{
+                label: 'Tasks by Status',
+                data: [20, 10, 80, 5, 5], // Example data, replace with dynamic values
+                backgroundColor: ['#ff6384', '#36a2eb', '#4caf50', '#ffcd56', '#9c27b0'],
+            }]
+        };
+
+        // Config for Status Chart
+        const statusConfig = {
+            type: 'bar',
+            data: statusData,
+        };
+
+        
+        new Chart(
+            document.getElementById('statusChart'),
+            statusConfig
+        );
+    </script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .stats-summary {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex-basis: 30%;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .stat-item h3 {
+            color: #555;
+        }
+
+        .stat-item p {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .tasks-priority, .tasks-status {
+            margin: 40px 0;
+        }
+    </style>
+</body>
+</html>

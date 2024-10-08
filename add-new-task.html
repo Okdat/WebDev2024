@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="home.css"> 
+<link rel="stylesheet" href="disable-scroll-view.css"> 
+
+<form class="task-form">
+    <label for="task-title">Task Title:</label>
+    <input type="text" id="task-title" required>
+
+    <label for="task-description">Description:</label>
+    <textarea id="task-description" required></textarea>
+
+   
+
+    <label for="start-date">Start Date:</label>
+    <input type="date" id="start-date" required>
+
+    <label for="end-date">End Date:</label>
+    <input type="date" id="end-date" required>
+    <label for="task-priority">Priority:</label>
+    <select id="task-priority" required>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+    </select>
+    <button type="submit">Add Task</button>
+</form>
