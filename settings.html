@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+    <link rel="stylesheet" href="settings.css"> 
+</head>
+<body>
+    <div class="settings-container">
+        
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <img src="profile.png" alt="Profile Picture" class="profile-picture">
+            <div class="profile-details">
+                <h2>dontkillmenguyen@gmail.com</h2>
+                <p>Dat's very good looking</p>
+            </div>
+            <div class="profile-actions">
+                <button class="manage-account-btn">Manage account</button>
+                <button class="sign-out-btn">Sign out</button>
+            </div>
+        </div>
+
+        <!-- General Settings Section -->
+        <div class="settings-section">
+            <h3>General</h3>
+            
+            <div class="setting-item">
+                <label for="add-tasks-top">Add new tasks on top</label>
+                <input type="checkbox" id="add-tasks-top" checked>
+            </div>
+            
+            <div class="setting-item">
+                <label for="move-starred-tasks">Move starred tasks to top</label>
+                <input type="checkbox" id="move-starred-tasks" checked>
+            </div>
+
+            <div class="setting-item">
+                <label for="play-sound">Play completion sound</label>
+                <input type="checkbox" id="play-sound" checked>
+            </div>
+
+            <div class="setting-item">
+                <label for="confirm-delete">Confirm before deleting</label>
+                <input type="checkbox" id="confirm-delete" checked>
+            </div>
+
+            <div class="setting-item">
+                <label for="auto-start">Auto-start To Do with Windows startup</label>
+                <input type="checkbox" id="auto-start">
+            </div>
+
+            <div class="setting-item">
+                <label for="week-start">Start of the Week</label>
+                <select id="week-start">
+                    <option value="system">System default</option>
+                    <option value="monday">Monday</option>
+                    <option value="sunday">Sunday</option>
+                </select>
+            </div>
+
+            <div class="setting-item">
+                <label for="app-badge">App Badge</label>
+                <select id="app-badge">
+                    <option value="due-overdue">Due today and overdue</option>
+                    <option value="all-tasks">All tasks</option>
+                </select>
+            </div>
+
+            <div class="setting-item">
+                <label for="recognize-dates">Recognize dates and times in task titles</label>
+                <input type="checkbox" id="recognize-dates" checked>
+            </div>
+
+            <div class="setting-item">
+                <label for="remove-dates">Remove dates and times once recognized</label>
+                <input type="checkbox" id="remove-dates">
+            </div>
+
+            <button class="pin-taskbar-btn">Pin to taskbar</button>
+        </div>
+
+        <!-- Theme Section -->
+        <div class="settings-section">
+            <h3>Theme</h3>
+            <div class="setting-item">
+                <label for="theme-light">Light theme</label>
+                <input type="radio" id="theme-light" name="theme" value="light">
+            </div>
+            <div class="setting-item">
+                <label for="theme-dark">Dark theme</label>
+                <input type="radio" id="theme-dark" name="theme" value="dark">
+            </div>
+            <div class="setting-item">
+                <label for="theme-default">Use my Windows theme</label>
+                <input type="radio" id="theme-default" name="theme" value="default" checked>
+            </div>
+        </div>
+
+        <!-- Smart Lists Section -->
+        <div class="settings-section">
+            <h3>Smart lists</h3>
+            <div class="setting-item">
+                <label for="smart-important">Important</label>
+                <input type="checkbox" id="smart-important" checked>
+            </div>
+            <div class="setting-item">
+                <label for="smart-planned">Planned</label>
+                <input type="checkbox" id="smart-planned" checked>
+            </div>
+            <div class="setting-item">
+                <label for="smart-completed">Completed</label>
+                <input type="checkbox" id="smart-completed">
+            </div>
+            <div class="setting-item">
+                <label for="smart-all">All</label>
+                <input type="checkbox" id="smart-all">
+            </div>
+            <div class="setting-item">
+                <label for="smart-assigned">Assigned to me</label>
+                <input type="checkbox" id="smart-assigned" checked>
+            </div>
+        </div>
+
+        <!-- Notifications Section -->
+        <div class="settings-section">
+            <h3>Notifications</h3>
+            <div class="setting-item">
+                <label for="Reminder">Reminder</label>
+                <input type="checkbox" id="Reminder" checked>
+            </div>
+            <div class="setting-item">
+                <label for="Shared list activity">Shared list activity</label>
+                <input type="checkbox" id="Shared list activity" checked>
+            </div>
+        </div>
+
+        <!-- Help & Feedback Section -->
+        <div class="settings-section">
+            <h3>Help & feedback</h3>
+            <div class="help-links">
+                <a href="#">Get support</a>
+                <a href="#">Suggest a feature</a>
+                <a href="#">Rate us</a>
+            </div>
+            <button class="sync-btn">Sync</button>
+        </div>
+    </div>
+</body>
+</html>
